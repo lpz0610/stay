@@ -1,7 +1,8 @@
 @charset "UTF-8";
 @import './home.scss';
-//轮播图部分
+
 .main{
+  //轮播图部分
   .main-banner {
     width: 100%;
     height: 650px;
@@ -124,5 +125,108 @@
         }
       }
     }
+  }
+  //轮播图下方广告部分
+  %ad_public {
+    width: 560px;
+    height: 160px;
+    background: #f4f4f4;
+    position: relative;
+  }
+  %ad_img {
+    transition: transform 0.6s ease-in-out;
+    position: absolute;
+    top: 50px;
+    left: 60px;
+    &:hover {
+      -webkit-transform: rotate(360deg) scale(1.2);
+      -moz-transform: rotate(360deg) scale(1.2);
+      -ms-transform: rotate(360deg) scale(1.2);
+      -o-transform: rotate(360deg) scale(1.2);
+      transform: rotate(360deg) scale(1.2);
+    }
+  }
+  %ad_text {
+    float: right;
+    width: 380px;
+    height: 130px;
+    padding-top: 30px;
+    p {
+      padding-top: 16px;
+      color: #a0a0a0;
+    }
+    h3 {
+      font-size: 20px;
+      font-weight: 500;
+      color: #2f2f2f;
+      span {
+        display: inline-block;
+        animation-name: topDown; // 动画名
+        animation-duration: .3s; // 动画播放时间
+        animation-iteration-count: infinite; // 动画播放次数
+        animation-direction: alternate; // 动画播放方向
+        &:nth-child(2){
+          animation-delay: .3s;
+        }
+        &:nth-child(3){
+          animation-delay: .6s;
+        }
+        &:nth-child(4){
+          animation-delay: .9s;
+        }
+      }
+    }
+  }
+  .ad {
+    margin: 50px auto;
+    .ad-left {
+      float: left;
+      @extend %ad_public;
+      .img {
+        @extend %ad_img;
+      }
+      .text {
+        @extend %ad_text;
+        a {
+          color: #84c6ca;
+        }
+      }
+    }
+    .ad-right {
+      float: right;
+      @extend %ad_public;
+      .img {
+        @extend %ad_img;
+        .clock {
+          position: absolute;
+          top: 25px;
+          left: 27px;
+          animation: rotate 2s linear infinite;
+        }
+      }
+      .text {
+        @extend %ad_text;
+      }
+    }
+  }
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes topDown {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-6px);
   }
 }
