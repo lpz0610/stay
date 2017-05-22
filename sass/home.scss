@@ -209,4 +209,63 @@ header {
   }
 }
 /*顶部导航结束*/
+/*footer部分开始*/
+footer {
+  width: 100%;
+  min-width: 1200px;
+  background: url("../images/ft_bg.png") repeat;
+  padding-bottom: 45px;
+  .link {
+    width: 830px;
+    margin: 0 auto;
+    padding-top: 60px;
+    dl {
+      float: left;
+      width: 180px;
+      dt {
+        font-size: 15px;
+        color: $mainColor;
+        padding-bottom: 16px;
+      }
+      dd {
+        font-size: 14px;
+        line-height: 24px;
+        a {
+          color: #818181;
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+    .officially {
+      width: 110px;
+      float: left;
+      p {
+        height: 24px;
+        line-height: 24px;
+        padding-left: 26px;
+        a {
+          color: #818181;
+        }
+        &:first-child {
+          a {
+            &:hover {
+              text-decoration: underline;
+            }
+          }
+        }
+        &:last-of-type {
+          a {
+            cursor: default;
+          }
+        }
+        img {
+          padding-top: 10px;
+        }
+      }
+    }
+  }
 
+}
+/*footer部分结束*/

@@ -246,3 +246,57 @@ header .login .login-link a.experience {
 }
 
 /*顶部导航结束*/
+/*footer部分开始*/
+footer {
+  width: 100%;
+  min-width: 1200px;
+  background: url("../images/ft_bg.png") repeat;
+  padding-bottom: 45px;
+}
+footer .link {
+  width: 830px;
+  margin: 0 auto;
+  padding-top: 60px;
+}
+footer .link dl {
+  float: left;
+  width: 180px;
+}
+footer .link dl dt {
+  font-size: 15px;
+  color: #50c8d7;
+  padding-bottom: 16px;
+}
+footer .link dl dd {
+  font-size: 14px;
+  line-height: 24px;
+}
+footer .link dl dd a {
+  color: #818181;
+}
+footer .link dl dd a:hover {
+  text-decoration: underline;
+}
+footer .link .officially {
+  width: 110px;
+  float: left;
+}
+footer .link .officially p {
+  height: 24px;
+  line-height: 24px;
+  padding-left: 26px;
+}
+footer .link .officially p a {
+  color: #818181;
+}
+footer .link .officially p:first-child a:hover {
+  text-decoration: underline;
+}
+footer .link .officially p:last-of-type a {
+  cursor: default;
+}
+footer .link .officially p img {
+  padding-top: 10px;
+}
+
+/*footer部分结束*/
